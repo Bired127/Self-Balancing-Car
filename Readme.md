@@ -11,6 +11,6 @@
 
 Ví dụ:
 
-    Trong công nghệ y học hiện đại, ta đã phát triển các cánh tay robot giúp con người phẩu thuật. Giải thuật PID được ứng dụng rất nhiều trong đây vì nếu không có PID các cánh tay sẽ không thể chuyển động mượt mà và sẽ bị rung, giật => Gây ra sai sót và gây hậu quả rất nghiêm trọng trong quá trình phẩu thuật.
+Trong công nghệ y học hiện đại, ta đã phát triển các cánh tay robot giúp con người phẩu thuật. Giải thuật PID được ứng dụng rất nhiều trong đây vì nếu không có PID các cánh tay sẽ không thể chuyển động mượt mà và sẽ bị rung, giật => Gây ra sai sót và gây hậu quả rất nghiêm trọng trong quá trình phẩu thuật.
 
 - Phương trình giải thuật PID:
