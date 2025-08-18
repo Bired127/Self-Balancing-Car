@@ -48,9 +48,9 @@ void  pin_INI() {
   pinMode(MS2, OUTPUT);
   pinMode(MS3, OUTPUT);
   digitalWrite(Enable, LOW);
-  digitalWrite(MS1, LOW);
+  digitalWrite(MS1, HIGH);
   digitalWrite(MS2, HIGH);
-  digitalWrite(MS3, LOW);
+  digitalWrite(MS3, HIGH);
 }
 
 
@@ -83,7 +83,7 @@ unsigned long loop_timer;
 //Hàm ngắt cho timer 2
 ISR(TIMER2_COMPA_vect) {
   //tạo xung STEP cho MOTOR1
-  if (Dir_M 1 != 0) {    //nếu MOTOR cho phép quay
+  if (Dir_M1 != 0) {    //nếu MOTOR cho phép quay
     Count_timer1++;
     if (Count_timer1 <= Count_TOP1)PORTD |= 0b00100000;//nếu là nhịp nằm trong phần cao trong xung STEP
     else PORTD &= 0b11011111;  //nếu là nhịp nằm trong phần thấp của xung STEP
