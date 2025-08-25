@@ -1,7 +1,6 @@
 /*
   XE CÂN BẰNG 2 BÁNH
   Author: NGUYỄN CẢNH TOÀN
-  Date: 05/09/2024
 
   Sử dụng vi điều khiển Arduino nano kết hợp CNC Shield V4
   Điều khiển động cơ dùng 2 x A4988 hoặc  2 x DVR8825
@@ -82,14 +81,14 @@ unsigned long loop_timer;
 //     CHƯƠNG TRÌNH NGẮT CỦA TIMER2
 //Hàm ngắt cho timer 2
 ISR(TIMER2_COMPA_vect) {
-  //tạo xung STEP cho MOTOR1
+  //tạo xung STEP cho MOTOR
   if (Dir_M1 != 0) {    //nếu MOTOR cho phép quay
     Count_timer1++;
-    if (Count_timer1 <= Count_TOP1)PORTD |= 0b00100000;//nếu là nhịp nằm trong phần cao trong xung STEP
-    else PORTD &= 0b11011111;  //nếu là nhịp nằm trong phần thấp của xung STEP
+    if (Count_timer1 <= Count_TOP1)PORTD |= 0b00100000;
+    else PORTD &= 0b11011111;
     if (Count_timer1 > Count_BOT1) {
-      Count_timer1 = 0; // cho biến couter về 0 để chuẩn bị cho lần ngắt tiếp theo
-      if (Dir_M1 > 0)Step1++; // Step được dùng để tính vận tốc và tính số bước
+      Count_timer1 = 0; 
+      if (Dir_M1 > 0)Step1++; 
       else if (Dir_M1 < 0)Step1--;
     }
   }
